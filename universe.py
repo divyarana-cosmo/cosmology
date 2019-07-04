@@ -61,5 +61,3 @@ class cosmology(constants):
 
 
 
-#co_f = cosmology(0.0,0.3,0.7)
-#print co_f.z2d_ang(0.3)
