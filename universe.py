@@ -1,5 +1,6 @@
 import numpy as np
 from scipy.integrate import quad
+import sys
 class constants:
     """Useful constants"""
     speed_of_light = 3e5 # c in km/s
@@ -11,6 +12,11 @@ class cosmology(constants):
         self.omg_m0 = omg_r0
         self.omg_l0 = omg_l0
         self.omg_k0 = omg_k0
+        omg_tot = omg_r0 + omg_m0 + omg_l0 + omg_k0
+        print "OMG_TOTAL = %2.5F" % (omg_tot)
+        if(omg_tot!=1.0):
+            print "OMEGA TOTAL IS NOT EQUAL TO ONE!!!!\n"
+            sys.exit(0)
         print "Intializing cosmology with omega parameters \n omg_r0 = %2.5f, omg_m0 = %2.5f, omg_l0 = %2.5f, omg_k0 = %2.5f"%(self.omg_r0,self.omg_m0,self.omg_l0,self.omg_k0)
 
     def scale2redshift(self,scale):
