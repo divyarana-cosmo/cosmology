@@ -1,6 +1,5 @@
 import numpy as np
 from scipy.integrate import quad
-import sys
 
 class constants:
     """Useful constants"""
