@@ -12,7 +12,7 @@ class cosmology(constants):
         self.omg_r0 = omg_r0
         self.omg_m0 = omg_m0
         self.omg_l0 = omg_l0
-        self.omg_k0 = 1 - omg_r0 - omg_m0 - omg_l0
+        self.omg_k0 = 1. - (omg_r0 +omg_m0 + omg_l0)
         print "Intializing cosmology with omega parameters \n omg_r0 = %2.5f\n omg_m0 = %2.5f\n omg_l0 = %2.5f\n omg_k0 = %2.5f"%(self.omg_r0,self.omg_m0,self.omg_l0,self.omg_k0)
 
     def scale2redshift(self,scale):
